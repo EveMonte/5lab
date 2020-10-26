@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\ООП\5lab\5lab\bin\Debug\5lab.exe.config
+C:\Users\User\Desktop\ООП\5lab\5lab\bin\Debug\5lab.exe
+C:\Users\User\Desktop\ООП\5lab\5lab\bin\Debug\5lab.pdb
+C:\Users\User\Desktop\ООП\5lab\5lab\obj\Debug\5lab.csprojAssemblyReference.cache
+C:\Users\User\Desktop\ООП\5lab\5lab\obj\Debug\5lab.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ООП\5lab\5lab\obj\Debug\5lab.exe
+C:\Users\User\Desktop\ООП\5lab\5lab\obj\Debug\5lab.pdb
