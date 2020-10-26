@@ -91,6 +91,7 @@ namespace _5lab
         }
     }
 
+    //sealed
     sealed class Engine
     {
         int Power;
