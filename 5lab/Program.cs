@@ -132,10 +132,14 @@ namespace _5lab
         static void Main(string[] args)
         {
             Car car = new Car();
+            Train train = new Train();
+            Wagon wagon = new Wagon();
             Console.WriteLine(car.ToString());
             Console.WriteLine(car.GetHashCode());
             Console.WriteLine(car.Equals(car));
-
+            Console.WriteLine("car is Car: " + (car is Car));
+            Console.WriteLine("train is Train: " + (train is Train));
+            Console.WriteLine("wagon is Vehicle: " + (wagon is Vehicle));
         }
     }
 }
