@@ -10,6 +10,7 @@ namespace _5lab
     public interface IMovable
     {
         bool IsThereAnEngine();
+
         int Wheels { get; set; }
         string Driver();
     }
@@ -126,20 +127,42 @@ namespace _5lab
             return Str;
         }
     }
+        public class Printer
+        {
+            public string IAmPrinting(IMovable InterfaceObJect)
+            {
+                
+            return InterfaceObJect.ToString();
+        }
+        }
 
-    class Program
+        class Program
     {
         static void Main(string[] args)
         {
             Car car = new Car();
             Train train = new Train();
             Wagon wagon = new Wagon();
+
             Console.WriteLine(car.ToString());
             Console.WriteLine(car.GetHashCode());
             Console.WriteLine(car.Equals(car));
             Console.WriteLine("car is Car: " + (car is Car));
             Console.WriteLine("train is Train: " + (train is Train));
             Console.WriteLine("wagon is Vehicle: " + (wagon is Vehicle));
+
+            List<IMovable> Locomotive = new List<IMovable>();
+            Locomotive.Add(new Train());
+            Locomotive.Add(new Wagon());
+            Locomotive.Add(new Car());
+            Locomotive.Add(new Wagon());
+            Locomotive.Add(new Express());
+
+            Printer printer = new Printer();
+            foreach(IMovable Obj in Locomotive)
+            {
+                Console.WriteLine(printer.IAmPrinting(Obj));
+            }
         }
     }
 }
