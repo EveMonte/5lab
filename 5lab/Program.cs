@@ -11,7 +11,7 @@ namespace _5lab
     {
         bool IsThereAnEngine();
         int Wheels { get; set; }
-
+        string Driver();
     }
     public abstract class Vehicle
     {
@@ -31,6 +31,8 @@ namespace _5lab
         {
             return base.GetHashCode();
         }
+        public abstract string Driver();
+
     }
 
     public class Car : Vehicle, IMovable
@@ -42,6 +44,11 @@ namespace _5lab
             Power = Convert.ToInt32(Console.ReadLine());
             Engine engine = new Engine(Power);
         }
+
+        public override string Driver()
+        {
+            return "Водитель управляет автомобилем";
+        }
         public bool IsThereAnEngine()
         {
             return true;
@@ -50,6 +57,10 @@ namespace _5lab
         {
             string Str = "_5lab.Car Override Method";
             return Str;
+        }
+        string IMovable.Driver()
+        {
+            return "Переопределенный метод интерфейса, вызванный в классе Car";
         }
     }
     
@@ -61,6 +72,16 @@ namespace _5lab
             Console.WriteLine("Введите мощность двигателя");
             Power = Convert.ToInt32(Console.ReadLine());
             Engine engine = new Engine(Power);
+        }
+
+        public override string Driver()
+        {
+            return "Поездом управляет машинист";
+        }
+
+        string IMovable.Driver()
+        {
+            return "Переопределенный метод интерфейса, вызванный в классе Train";
         }
         public bool IsThereAnEngine()
         {
